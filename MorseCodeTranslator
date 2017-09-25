@@ -1,4 +1,16 @@
-Console.WriteLine("Please enter a statement you want translated to Braille");
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter a statement you want translated to Braille");
             string input = Console.ReadLine();
             char[] input_array = input.ToCharArray();
             char[] alpha = { 'a', 'b' };
@@ -200,3 +212,6 @@ Console.WriteLine("Please enter a statement you want translated to Braille");
             Console.WriteLine(middleline);
             Console.WriteLine(bottomline);
             Console.ReadLine();
+        }
+    }
+}
