@@ -1,0 +1,22 @@
+blank_hash = {}
+# blank_hash = Hash.new
+blank_array = []
+# blank_array = Array.new
+
+blank_hash["john"] = "Pretty cool"
+blank_hash["jean"] = "Also cool"
+blank_hash[:name] = "Some name here"
+
+puts blank_hash
+
+other = "lastname"
+
+some_hash = {"name" => "John", "grade" => 100}
+puts some_hash["name"]
+
+some_hash = {:name => "John", :grade => 100}
+some_hash = {name: "John", grade: 100}
+puts some_hash[:name]
+
+some_hash = {"name" => "John", other => "Lange"}
+puts some_hash["lastname"]
