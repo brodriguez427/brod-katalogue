@@ -1,3 +1,3 @@
-<h1>Belinda's Katalogue</h1>
+# Belinda's Katalogue
 
-This is where I store coding exercises that I've completed.
+This is where I short store coding exercises I've completed.
