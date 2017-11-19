@@ -1,3 +1,3 @@
 # Belinda's Katalogue
 
-This is where I short store coding exercises I've completed.
+This is where I store coding exercises I've completed.
