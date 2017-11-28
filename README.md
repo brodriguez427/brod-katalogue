@@ -1,3 +1,3 @@
-# Belinda's Katalogue
+# projects
 
-This is where I store coding exercises I've completed.
+This is where I save longer and more complex coding exercises I've completed.

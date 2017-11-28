@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>iMessage</title>
+
+        <style>
+            body{
+                background-color: white;
+                width: 350px;
+            }
+            p {
+            position: relative;
+            padding: 12px; 
+            width: 200px;
+            height: relative;
+            font-family: Helvetica;
+            font-weight: lighter;
+            font-size: 18px;
+            border-radius:20px;
+            width: 400px;    
+            }
+            .right {
+            background: #0076FF;
+            color: white;
+            }
+            .sent {
+            position: relative;
+            margin: 5.5px;
+            background: #0076FF;
+            color: white;
+            align-items: right;
+            width: 200px;
+            float: right;
+            clear: left;
+            }
+            .sent:after {
+            content: '';
+	        position: absolute;
+	        bottom: 10px;
+	        left: 95%;
+	        border: 20px solid transparent;
+	        border-top-color: #0076FF;
+	        border-bottom: 0;
+	        border-right: 0;
+	        margin-left: -10px;
+	        margin-bottom: -20px;
+            transform: rotate(-30deg);
+            }
+            .received {
+            position: relative;
+	        background: lightgray;
+            margin: 5.5px;
+            width: 200px;
+            float: left;
+            clear: right;
+            }
+            .received:after {
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            left: 5%;
+            width: 0;
+            height: 0;
+            border: 20px solid transparent;
+            border-top-color: lightgray;
+            border-bottom: 0;
+            border-left: 0;
+            margin-left: -10px;
+            margin-bottom: -20px;
+            transform: rotate(30deg);
+            }
+            .input {
+                height: 30px;
+                font-size: 18px;
+                font-family: Helvetica;
+                font-weight: lighter;
+                width: 340px;
+                margin-right: 0px;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                margin-left: 3px;
+                padding: 7px;
+                padding-right: 30px;
+                padding-bottom: 10px;
+                border-style: 1px;
+                border-style: solid;
+                border-radius: 25px;
+                border-color: lightgray;
+                outline: none;
+            }                
+            
+            .send {
+                border-radius: 50%;
+                border: none;
+                font-size: 14px;
+                color: white;
+                background: #0076FF;
+                padding: 1px;
+                padding-left: 8px;
+                padding-right: 8px;
+                display: inline-block;
+                font-family: Helvetica;
+                font-weight: lighter;
+                text-align: center;
+                margin-bottom: .5px;
+                margin-left: -35px;
+                outline: none;
+            }
+
+        </style>
+
+
+        <script>
+            clickSend = () => {
+                var responses = ["Omg no way", "You did not", "Absolutely", "Wait, what?", "If you're expecting these messages to make sense, you're expecting too much"]
+               document.getElementById("messages").innerHTML += `<p class="sent">${document.getElementById("input").value}</p>`;
+               document.getElementById("input").value = ' ';
+               document.getElementById("messages").innerHTML += `<p class="received">${responses[Math.floor(Math.random() * responses.length)]}</p>`;
+            }
+           
+        </script>
+
+    </head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+        <div class="messages" id="messages">   
+        <div class="right" id="right">
+                <p class="sent" id="sent">Hey what's up</p>
+        </div>
+        <p class="received">Nm u?</p>
+        </div> 
+            <div class="compose">
+                    <input type="text" class="input" id="input"/>
+                    <button onClick="clickSend()" class="send">↑</button>
+	</div>   
+</body>
+
+</html>
