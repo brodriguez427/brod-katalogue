@@ -4,20 +4,27 @@
         <title>iMessage</title>
 
         <style>
-            body{
-                background-color: white;
-                width: 350px;
+            container {
+            height: 800px;
             }
+            
+            body{
+            background-color: white;
+            width: 350px;
+            height: 800px;
+            }
+
             p {
             position: relative;
             padding: 12px; 
-            width: 200px;
-            height: relative;
+            height: auto;
             font-family: Helvetica;
             font-weight: lighter;
             font-size: 18px;
             border-radius:20px;
-            width: 400px;    
+            }
+            .messages {
+                height: 10%;
             }
             .right {
             background: #0076FF;
@@ -28,7 +35,6 @@
             margin: 5.5px;
             background: #0076FF;
             color: white;
-            align-items: right;
             width: 200px;
             float: right;
             clear: left;
@@ -105,6 +111,11 @@
                 margin-bottom: .5px;
                 margin-left: -35px;
                 outline: none;
+
+            .compose {
+                vertical-align: bottom;
+                bottom: 2px;
+            }
             }
 
         </style>
@@ -124,17 +135,22 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
+
+    <body>
+        <div id = "container">
         <div class="messages" id="messages">   
         <div class="right" id="right">
                 <p class="sent" id="sent">Hey what's up</p>
         </div>
-        <p class="received">Nm u?</p>
+        <p class="received">Not much, you?</p>
         </div> 
             <div class="compose">
                     <input type="text" class="input" id="input"/>
                     <button onClick="clickSend()" class="send">↑</button>
-	</div>   
-</body>
+            </div>
+        </div>    
+            
+
+    </body>
 
 </html>
